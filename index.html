@@ -1,1 +1,35 @@
-Do no harm
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Victor Elkjær Birk's Portfolio">
+  <meta name="keywords" content="victor, elkjaer, birk, victor elkjaer, victor elkjaer birk, victor birk, ai, artificial intelligence, machine learning, deep learning, dl, natural language processing, nlp, consultant, research, physics, mathematics, problem-solving, dtu, technical university of denmark, ibm, public sector, digital strategy, cloud, design thinking">
+  <meta name="author" content="Victor Elkjaer Birk">
+  <title>Bonjour 👋</title>
+  <link rel="stylesheet" href="https://latex.now.sh/style.min.css" />
+</head>
+<body>
+  <h2 id="the-doyen-of-doggos">The doyen of doggos</h2>
+  <img id="doggo-img" style="width: 100%;">
+
+</body>
+</html>
+
+<script>
+  function httpGetAsync(theUrl, callback) {
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+            if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+                callback(JSON.parse(xmlHttp.responseText));
+        }
+        xmlHttp.open("GET", theUrl, true);
+        xmlHttp.send(null);
+  }
+
+  function setImgCallback(response) {
+    const imgURL = response.message;
+    document.getElementById("doggo-img").src = imgURL;
+  }
+
+  httpGetAsync("https://dog.ceo/api/breeds/image/random", setImgCallback);
+
+</script>
